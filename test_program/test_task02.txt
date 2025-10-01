@@ -1,0 +1,35 @@
+Program _aB1;
+Data Int16 _aA1, _bB1, _cC1, _mA1;
+Begin 
+    Get (_aA1);
+    Get (_bB1):
+    Get (_cC1);
+
+    If _aA1 >> _bB1 And _aA1 >> _cC1 {
+        _mA1 :> _aA1;
+    } Else if _bB1 >> _aA1 And _bB1 >> _cC1 {
+        _mA1 :> _bB1;
+    } Else {
+        _mA1 :> _cC1;
+    }
+    Put (_mA1);
+
+    If (_aA1  Eg _bB1) And (_aA1 Eg _cC1) And (_bB1 Eg _cC1) {
+        Put (1);
+    } Else {
+        Put (0);
+    }
+
+    If ! (_aA1 >> 0) || ! (_bB1 >> 0) || ! (_cC1 >> 0) {
+        Put (-1);
+    } Else {
+        Put (0);
+    }
+
+    If _aA1 >> (_bB1 + _cC1) {
+        Put (10);
+    } Else {
+        Put (0);
+    }
+
+End

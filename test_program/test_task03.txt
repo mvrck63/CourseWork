@@ -1,0 +1,16 @@
+Program _aB1;
+Data Int16 _aA1, _bB1, _cY1, _cY2, _xV1;
+Begin
+    Get (_aA1);
+    Get (_bB1);
+
+    For _cy1 :> _aA1 To _bB1 Do;
+        Put (_cy1 * _cy1);
+
+    _xV1 :> 0;
+    For _cy1 :> 1 To _aA1 Do;
+        For _cy2 :> To _bB1 Do;
+            _xV1 :> _xV1 + 1;
+    Put (_xV1);
+
+End 

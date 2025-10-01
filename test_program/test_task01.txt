@@ -1,0 +1,19 @@
+Program _aB1;
+Data Int16 _aA1, _bB1, _xX1, _yY1;
+Begin 
+    Get (_aA1);
+    Get (_bB1);
+
+    Put (_aA1 + _bB1);
+    Put (_aA1 - _bB1);
+    Put (_aA1 * _bB1);
+    Put (_aA1 DIV _bB1);
+    Put (_aA1 MOD _bB1);
+
+    (_aA1 - _bB1) * 10 + (_aA1 + _bB1) DIV 10 :> _xX1
+    _xX1 + (_xX1 MOD 10) :> _yY1 
+
+    Put (_xX1);
+    Put (_yY1);
+    
+End
